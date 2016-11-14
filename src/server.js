@@ -42,7 +42,7 @@ export default function configure(verify = defaultVerifier) {
     } else {
       returnLocation = 'http://localhost:' + (process.env.PORT || 3000);
     }
-  } else if (process.env.NODE_ENV === 'production') {
+  } else if (process.env.NODE_ENV === 'production' && process.env.DISABLE_SSL !== 'true') {
     returnLocation = 'https://' + DOMAIN_NAME;
   } else {
     returnLocation = 'http://' + DOMAIN_NAME;
