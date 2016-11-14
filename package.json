@@ -1,0 +1,39 @@
+{
+  "name": "moped-auth-github",
+  "version": "0.0.5",
+  "main": "lib/index.js",
+  "description": "GitHub authentication for moped",
+  "keywords": [],
+  "files": [
+    "lib/",
+    "client.js",
+    "server.js"
+  ],
+  "dependencies": {
+    "babel-runtime": "^6.3.19",
+    "passport-github2": "^0.1.10",
+    "promise": "^7.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-preset-forbeslindesay": "*",
+    "eslint": "*",
+    "eslint-config-forbeslindesay": "*",
+    "testit": "*"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src --out-dir lib",
+    "lint": "eslint src",
+    "test": "babel-node test/index.js && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopedjs/moped-auth-github.git"
+  },
+  "author": {
+    "name": "Forbes Lindesay",
+    "url": "http://github.com/ForbesLindesay"
+  },
+  "license": "MIT"
+}
